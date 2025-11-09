@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>College Staff - CGIT Kabirdham</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="CGIT Kabirdham, Chhattisgarh Institute of Technology, CSVTU, College Staff, Faculty, Non-Technical Staff" name="keywords">
+    <meta content="Meet the dedicated teaching and non-teaching staff of CGIT Kabirdham, including Principal, HODs, lecturers, and administrative personnel." name="description">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Header logo and title sizing */
+        .top-logo {
+            height: 45px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .college-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        @media (max-width: 768px) {
+            .college-title {
+                font-size: 1.4rem;
+            }
+            .top-logo {
+                height: 38px;
+            }
+        }
+
+        /* Hero Section Background for College Staff */
+        .staff-hero {
+            position: relative;
+            background-image: url('img/coll.jpg'); /* Using your college image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 140px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .staff-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.55); /* Dark overlay for text readability */
+        }
+
+        .staff-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Staff Card Styling */
+        .staff-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .staff-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .staff-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--bs-primary);
+            margin-bottom: 20px;
+        }
+
+        .staff-card h5 {
+            color: var(--bs-primary);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .staff-card p {
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .staff-card .qualification {
+            font-size: 0.85em;
+            color: #777;
+        }
+
+        /* Section headings */
+        .staff-section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--bs-primary);
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .staff-section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--bs-secondary);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <div class="container-fluid bg-secondary top-bar wow fadeIn" data-wow-delay="0.1s">
+        <div class="row align-items-center h-100">
+            <div class="col-lg-4 text-center text-lg-start">
+                <a href="index.html"
+                    class="d-flex align-items-center justify-content-center justify-content-lg-start text-decoration-none">
+                    <img src="img/cggov.png" alt="Chhattisgarh Govt Logo" class="top-logo">
+                    <h1 class="text-primary m-0 college-title">CGIT Kabirdham</h1>
+                </a>
+            </div>
+            <div class="col-lg-8 d-none d-lg-block">
+                <div class="row">
+                    <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                        <div class="btn-square bg-primary"><i class="fa fa-phone-alt text-dark"></i></div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Call Us</h6>
+                            <span class="text-white">+91-8319595025</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                        <div class="btn-square bg-primary"><i class="fa fa-envelope-open text-dark"></i></div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Mail Us</h6>
+                            <span class="text-white">principal.067.csvtu@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                        <div class="btn-square bg-primary"><i class="fa fa-map-marker-alt text-dark"></i></div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Address</h6>
+                            <span class="text-white">Village Maharajpur, Kabirdham, CG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-secondary px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-lg-0">
+                <h4 class="d-lg-none m-0">Menu</h4>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav me-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">AboutUs</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Administration</a>
+                            <div class="dropdown-menu bg-light m-0">
+                               <a href="principal.html" class="dropdown-item">Principal</a>
+                                <a href="Institute-feedback.html" class="dropdown-item">Institute Feedback (Faculty/Student)</a>
+                                <a href="college-staff.html" class="dropdown-item active">College Staff</a> 
+                                <a href="committees.html" class="dropdown-item">Committees</a>
+                                <!--<a href="non-academic.html" class="dropdown-item">Non-Academic Section</a>-->
+                            </div>
+                        </div>
+                        <a href="academics.html" class="nav-item nav-link">Academics</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Facilities</a>
+                            <div class="dropdown-menu bg-light m-0">
+                                <a href="library.html" class="dropdown-item">Library</a>
+                                <a href="hostel.html" class="dropdown-item">Hostel</a>
+                                <a href="sports.html" class="dropdown-item">Sports</a>
+                            </div>
+                        </div>
+                       <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                    </div>
+                    <div class="d-none d-lg-flex ms-auto">
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid staff-hero wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white animated slideInDown mb-4">Our Dedicated Team</h1>
+            <p class="fs-4 text-white animated slideInDown">Meet the staff who make CGIT Kabirdham a center of excellence.</p>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-white">Administration</a></li>
+                    <li class="breadcrumb-item active text-primary" aria-current="page">College Staff</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-4 wow fadeIn" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h2 class="staff-section-title">Main Heads & HODs</h2>
+            </div>
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="staff-card">
+                        <img src="img/team-1.jpg" alt="Mr. Vimal Singh Bind Photo">
+                        <h5>Mr. Vimal Singh Bind</h5>
+                        <p>Lecturer (ET&T)</p>
+                        <p class="text-primary">Incharge Principal</p>
+                        <span class="qualification">M.Tech. (ET&T)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="staff-card">
+                        <img src="img/team-2.jpg" alt="Mr. Satendra Singh Bhadoriya Photo">
+                        <h5>Mr. Satendra Singh Bhadoriya</h5>
+                        <p class="text-primary">HOD (CSE)</p>
+                        <span class="qualification">M.Tech.</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="staff-card">
+                        <img src="img/team-3.jpg" alt="Mr. Avinash Kumar Singh Photo">
+                        <h5>Mr. Avinash Kumar Singh</h5>
+                        <p class="text-primary">HOD (CSE)</p>
+                        <span class="qualification">M.Tech. (IT)</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="staff-card">
+                        <img src="img/team-4.jpg" alt="Mr. RAHUL KUMAR SHRIVASTAVA">
+                        <h5>Mr. RAHUL KUMAR SHRIVASTAVA</h5>
+                        <p class="text-primary">HOD (ET)</p>
+                        <span class="qualification">B.E.</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="staff-card">
+                        <img src="img/team-5.jpg" alt="Miss. ROSHIN TIRKEY">
+                        <h5>Miss. ROSHIN TIRKEY</h5>
+                        <p class="text-primary">Lecturer (ET&T)</p>
+                        <span class="qualification">B.E.</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+   <!-- <div class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto pb-4 wow fadeIn" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h2 class="staff-section-title">Regular Lecturers</h2>
+            </div>
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="staff-card">
+                        <img src="img/staff-rahul-kumar.jpg" alt="Mr. Rahul Kumar Shrivastava Photo">
+                        <h5>Mr. Rahul Kumar Shrivastava</h5>
+                        <p>Lecturer (Electrical)</p>
+                        <span class="qualification">B.E.</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="staff-card">
+                        <img src="img/staff-lecturer-placeholder1.jpg" alt="Lecturer Placeholder 1 Photo">
+                        <h5>Ms. [Lecturer Name 1]</h5>
+                        <p>Lecturer (Department)</p>
+                        <span class="qualification">[Qualification]</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="staff-card">
+                        <img src="img/staff-lecturer-placeholder2.jpg" alt="Lecturer Placeholder 2 Photo">
+                        <h5>Mr. [Lecturer Name 2]</h5>
+                        <p>Lecturer (Department)</p>
+                        <span class="qualification">[Qualification]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-4 wow fadeIn" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h2 class="staff-section-title">Part-Time Lecturers</h2>
+            </div>
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="staff-card">
+                        <img src="img/team-6.jpg" alt="Mr. SANJAY KUMAR Photo">
+                        <h5>Mr. SANJAY KUMAR</h5>
+                        <p>Part-Time Lecturer (CSE)</p>
+                        <span class="qualification">B.E.</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="staff-card">
+                        <img src="img/Dilip.jpg" alt="Mr. DILIP KUMAR PURNM">
+                        <h5>Mr. DILIP KUMAR PURNM</h5>
+                        <p>Part-Time Lecturer (ET)</p>
+                        <span class="qualification">B.E.</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="staff-card">
+                        <img src="img/prateek.jpg" alt="Mr. PRATEEK JOSHI">
+                        <h5>Mr. PRATEEK JOSHI</h5>
+                        <p>Part-Time Lecturer (ET)</p>
+                        <span class="qualification">B.E.</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="staff-card">
+                        <img src="img/somnath.jpg" alt="Mr. SOMNATH CHANDRAVANSHI">
+                        <h5>Mr. SOMNATH CHANDRAVANSHI</h5>
+                        <p>Part-Time Lecturer (ET)</p>
+                        <span class="qualification">B.E.</span>
+                    </div>
+                </div>
+                
+                </div>
+        </div>
+    </div>
+
+   <!-- <div class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto pb-4 wow fadeIn" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h2 class="staff-section-title">Technical Staff</h2>
+            </div>
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="staff-card">
+                        <img src="img/staff-technical-placeholder1.jpg" alt="Technical Staff Placeholder 1 Photo">
+                        <h5>Mr. [Technical Staff Name 1]</h5>
+                        <p>Lab Assistant</p>
+                        <span class="qualification">[Qualification]</span>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-4 wow fadeIn" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h2 class="staff-section-title">Non-Technical Staff</h2>
+            </div>
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="staff-card">
+                        <img src="img/staff-nontechnical-placeholder1.jpg" alt="Non-Technical Staff Placeholder 1 Photo">
+                        <h5>Ms. [Non-Technical Staff Name 1]</h5>
+                        <p>Administrative Assistant</p>
+                        <span class="qualification">[Qualification]</span>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid bg-primary py-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="display-6 mb-4">Stay Connected with CGIT</h1>
+                    <div class="position-relative w-100 mb-2">
+                        <input class="form-control border-0 w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email"
+                            style="height: 60px;">
+                        <button type="button"
+                            class="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2"><i
+                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                    </div>
+                    <p class="mb-0">Subscribe to our newsletter for the latest updates, news, and events.</p>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5 py-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Our Office</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Village Maharajpur, Near Kendriya Vidyalaya, Kawardha, Kabirdham, Chhattisgarh</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-8319595025</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>principal.067.csvtu@gmail.com</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-x-twitter"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="academics.html">Academics</a>
+                    <a class="btn btn-link" href="term.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="student.html">Student Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Office Hours</h4>
+                    <p class="mb-1">Monday - Friday</p>
+                    <h6 class="text-light">10:00 am - 05:00 pm</h6>
+                    <p class="mb-1">Saturday</p>
+                    <h6 class="text-light">10:00 am - 01:00 pm</h6>
+                    <p class="mb-1">Sunday</p>
+                    <h6 class="text-light">Closed</h6>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Gallery</h4>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright pt-5">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="fw-semi-bold" href="index.html">CGIT Kabirdham</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a class="fw-semi-bold" href="https://mohitbaghel.dev">Mohit Creations</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Library - CGIT Kabirdham</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="CGIT Kabirdham, Library, Chhattisgarh Institute of Technology, CSVTU, Digital Library, Reading Room" name="keywords">
+    <meta content="Explore the library at CGIT Kabirdham, a hub of knowledge with over 40,000 books, a digital library, and a dedicated reading room." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Header logo and title sizing */
+        .top-logo {
+            height: 45px;
+            width: auto;
+            margin-right: 10px;
+        }
+        .college-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        @media (max-width: 768px) {
+            .college-title {
+                font-size: 1.4rem;
+            }
+            .top-logo {
+                height: 38px;
+            }
+        }
+
+        /* Hero Section Background for Library */
+        .library-hero {
+            position: relative;
+            background-image: url('img/library.jpg'); /* You'll need to create this image */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 140px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .library-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.55); /* Dark overlay for text readability */
+        }
+
+        .library-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Feature Section Styling */
+        .feature-section {
+            padding: 5rem 0;
+        }
+        .feature-section:nth-of-type(even) {
+            background-color: #f8f9fa; /* Light gray background */
+        }
+        .feature-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .feature-image:hover {
+            transform: scale(1.03);
+        }
+        .feature-text-content {
+            padding: 10px;
+        }
+        .feature-text-content i {
+            font-size: 3rem;
+            color: var(--bs-primary);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .feature-text-content h3 {
+            color: var(--bs-primary);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .feature-text-content p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+        
+        /* Info Card Styling */
+        .info-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            height: 100%;
+            text-align: center;
+        }
+        .info-card i {
+            font-size: 3rem;
+            color: var(--bs-primary);
+            margin-bottom: 20px;
+        }
+        .info-card h5 {
+            color: var(--bs-primary);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .info-card p, .info-card li {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 5px;
+        }
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        @media (max-width: 991px) {
+            .feature-text-content {
+                margin-top: 30px; /* Space between image and text on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+<div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width:3rem; height:3rem;"></div>
+    </div>
+
+    
+<div class="container-fluid bg-secondary top-bar wow fadeIn" data-wow-delay="0.1s">
+        <div class="row align-items-center h-100">
+            <div class="col-lg-4 text-center text-lg-start">
+                <a href="index.html" class="d-flex align-items-center justify-content-center justify-content-lg-start text-decoration-none">
+                    <img src="img/cggov.png" alt="Chhattisgarh Govt Logo" class="top-logo">
+                    <h1 class="text-primary m-0 college-title">CGIT Kabirdham</h1>
+                </a>
+            </div>
+            <div class="col-lg-8 d-none d-lg-block">
+                <div class="row">
+                    <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                        <div class="btn-square bg-primary"><i class="fa fa-phone-alt text-dark"></i></div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Call Us</h6>
+                            <span class="text-white">+91-8319595025</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                        <div class="btn-square bg-primary"><i class="fa fa-envelope-open text-dark"></i></div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Mail Us</h6>
+                            <span class="text-white">principal.067.csvtu@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                        <div class="btn-square bg-primary"><i class="fa fa-map-marker-alt text-dark"></i></div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Address</h6>
+                            <span class="text-white">Village Maharajpur, Kabirdham, CG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<div class="container-fluid bg-secondary px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-lg-0">
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav me-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">AboutUs</a> 
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Administration</a>
+                            <div class="dropdown-menu bg-light m-0">
+                               <a href="principal.html" class="dropdown-item">Principal</a>
+                                <a href="feedback.html" class="dropdown-item">Institute Feedback (Faculty/Student)</a>
+                                <a href="college-staff.html" class="dropdown-item">College Staff</a>
+                                <a href="committees.html" class="dropdown-item">Committees</a>
+                                
+                            </div>
+                        </div>
+                        <a href="academics.html" class="nav-item nav-link">Academics</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Facilities</a>
+                            <div class="dropdown-menu bg-light m-0">
+                                <a href="library.html" class="dropdown-item active">Library</a>
+                                <a href="hostel.html" class="dropdown-item">Hostel</a>
+                                <a href="sports.html" class="dropdown-item">Sports</a>
+                            </div>
+                        </div>
+                       <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                    </div>
+                    <div class="d-none d-lg-flex ms-auto">
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    
+<div class="container-fluid library-hero wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white animated slideInDown mb-4">The Knowledge Hub</h1>
+            <p class="fs-4 text-white animated slideInDown">Your gateway to information, innovation, and imagination.</p>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-white">Facilities</a></li>
+                    <li class="breadcrumb-item active text-primary" aria-current="page">Library</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    
+<!-- Intro Section -->
+<div class="container-fluid py-5 feature-section wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center mx-auto pb-4" style="max-width: 900px;">
+            <p class="section-title bg-white text-center text-primary px-3">Welcome to Our Library</p>
+            <h1 class="display-6 mb-4">The Heart of Academic Life at CGIT</h1>
+            <p class="fs-5" style="line-height: 1.8; color: #555;">Welcome to the central library of CGIT Kabirdham. More than just a collection of books, our library is a vibrant center for learning, research, and collaboration. We house an extensive collection of resources, including **over 40,000 books**, journals, and digital assets, all curated to support our rigorous B.Tech and Diploma programs. Our mission is to provide every student and faculty member with the information and support they need to excel in their academic pursuits.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Feature 1: Vast Collection (Image Left) -->
+<div class="container-fluid py-5 feature-section wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.3s">
+                <img src="img/library-books.jpg" class="img-fluid rounded feature-image" alt="Library Book Collection">
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.5s">
+                <div class="feature-text-content">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Our Extensive Collection</h3>
+                    <p>Our library boasts a rich and diverse collection of over 40,000 volumes, covering all branches of engineering, applied sciences, and humanities. We provide a comprehensive range of textbooks, reference books, and technical manuals to directly support the CSVTU curriculum.</p>
+                    <p>We also subscribe to a wide array of national and international journals, technical magazines, and periodicals, ensuring our students and faculty stay updated with the latest industry trends and research.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Feature 2: Digital Library (Image Right) -->
+<div class="container-fluid py-5 feature-section wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.3s">
+                <div class="feature-text-content">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Modern Digital Library</h3>
+                    <p>Embracing the future of learning, our digital library provides access to a vast repository of online resources. Students and faculty can explore thousands of e-books, e-journals, and online databases from leading publishers and academic societies.</p>
+                    <p>Equipped with high-speed internet and modern computer terminals, this section is designed to facilitate online research, access to digital courseware, and self-paced learning, providing a powerful supplement to our physical collection.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.5s">
+                <img src="img/library-digital.jpg" class="img-fluid rounded feature-image" alt="Digital Library Computers">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Feature 3: Reading Room (Image Left) -->
+<div class="container-fluid py-5 feature-section wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.3s">
+                <img src="img/library-reading.jpg" class="img-fluid rounded feature-image" alt="Library Reading Room">
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.5s">
+                <div class="feature-text-content">
+                    <i class="fas fa-user-clock"></i>
+                    <h3>Dedicated Reading Room</h3>
+                    <p>Our spacious and well-ventilated reading room provides a silent, peaceful, and comfortable environment, ideal for focused study and deep concentration. With ample seating and proper lighting, it is the perfect place for students to dive into their coursework, prepare for exams, or simply get lost in a good book.</p>
+                    <p>The reading room is designed to be a "no-disturbance" zone, fostering an atmosphere of academic discipline and scholarly pursuit for all members of our college community.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Library Info Section -->
+<div class="container-fluid py-5 feature-section wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center mx-auto pb-4" style="max-width: 900px;">
+            <p class="section-title bg-white text-center text-primary px-3">At a Glance</p>
+            <h1 class="display-6 mb-4">Library Services & Information</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h5>Library Timings</h5>
+                    <ul>
+                        <li><strong>Monday - Friday:</strong> 10:00 AM - 05:00 PM</li>
+                        <li><strong>Saturday:</strong> 10:00 AM - 01:00 PM</li>
+                        <li><strong>Sunday & Holidays:</strong> Closed</li>
+                        <li><em>(Timings extended during exam periods)</em></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="info-card">
+                    <i class="fas fa-users"></i>
+                    <h5>Our Staff</h5>
+                    <p>Our dedicated library staff are always available to assist you. From locating books and using digital resources to helping with research and referencing, our team is here to ensure you make the most of the library's facilities. Don't hesitate to ask for help!</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="info-card">
+                    <i class="fas fa-gavel"></i>
+                    <h5>General Rules</h5>
+                    <ul>
+                        <li>Maintain absolute silence in the reading room.</li>
+                        <li>Mobile phones must be on silent mode.</li>
+                        <li>No food or beverages are allowed inside.</li>
+                        <li>Return borrowed books on or before the due date.</li>
+                        <li>Handle all library property with care.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<div class="container-fluid bg-primary py-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="display-6 mb-4">Stay Connected with CGIT</h1>
+                    <div class="position-relative w-100 mb-2">
+                        <input class="form-control border-0 w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email"
+                            style="height: 60px;">
+                        <button type="button"
+                            class="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2"><i
+                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                    </div>
+                    <p class="mb-0">Subscribe to our newsletter for the latest updates, news, and events.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5 py-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Our Office</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Village Maharajpur, Near Kendriya Vidyalaya, Kawardha, Kabirdham, Chhattisgarh</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-8319595025</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>principal.067.csvtu@gmail.com</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-x-twitter"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="academics.html">Academics</a>
+                    <a class="btn btn-link" href="term.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="student.html">Student Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Office Hours</h4>
+                    <p class="mb-1">Monday - Friday</p>
+                    <h6 class="text-light">10:00 am - 05:00 pm</h6>
+                    <p class="mb-1">Saturday</p>
+                    <h6 class="text-light">10:00 am - 01:00 pm</h6>
+                    <p class="mb-1">Sunday</p>
+                    <h6 class="text-light">Closed</h6>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Gallery</h4>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright pt-5">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="fw-semi-bold" href="index.html">CGIT Kabirdham</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a class="fw-semi-bold" href="https://mohitbaghel.dev">Mohit Creations</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

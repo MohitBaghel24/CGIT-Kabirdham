@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gallery - CGIT Kabirdham</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="CGIT Kabirdham, Chhattisgarh Institute of Technology, CSVTU, Gallery, Photos, Tech Fest, Sports Meet">
+  <meta name="description" content="Explore moments and memories from CGIT Kabirdham. View our gallery of campus life, events, sports meets, and tech fests.">
+
+  <link href="img/favicon.ico" rel="icon">
+
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    /* --- Header Logo & College Title --- */
+    .top-logo {
+      height: 45px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .college-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    @media (max-width: 768px) {
+      .college-title {
+        font-size: 1.4rem;
+      }
+
+      .top-logo {
+        height: 38px;
+      }
+    }
+
+    /* --- Hero Section --- */
+    .gallery-hero {
+      position: relative;
+      background-image: url('img/coll.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 140px 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .gallery-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .gallery-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* --- Filter Buttons --- */
+    #gallery-filter {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 35px 0;
+      text-align: center;
+    }
+
+    #gallery-filter li {
+      cursor: pointer;
+      display: inline-block;
+      margin: 5px 8px;
+      padding: 8px 20px;
+      font-weight: 600;
+      color: var(--bs-primary);
+      border: 2px solid var(--bs-primary);
+      border-radius: 50px;
+      background: #fff;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #gallery-filter li:hover,
+    #gallery-filter li.active {
+      background: var(--bs-primary);
+      color: #000;
+    }
+
+    /* --- Gallery Items --- */
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 12px;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    .gallery-wrap img {
+      width: 100%;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+
+    .gallery-overlay i {
+      color: #fff;
+      font-size: 2rem;
+      transform: scale(0.8);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-wrap:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-wrap:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-wrap:hover .gallery-overlay i {
+      transform: scale(1.2);
+    }
+
+    /* --- Back To Top Button --- */
+    .back-to-top {
+      position: fixed;
+      right: 20px;
+      bottom: 25px;
+      display: none;
+      z-index: 99;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" role="status" style="width:3rem; height:3rem;"></div>
+  </div>
+
+  <div class="container-fluid bg-secondary top-bar wow fadeIn" data-wow-delay="0.1s">
+    <div class="row align-items-center h-100">
+      <div class="col-lg-4 text-center text-lg-start">
+        <a href="index.html" class="d-flex align-items-center justify-content-center justify-content-lg-start text-decoration-none">
+          <img src="img/cggov.png" alt="Chhattisgarh Govt Logo" class="top-logo">
+          <h1 class="text-primary m-0 college-title">CGIT Kabirdham</h1>
+        </a>
+      </div>
+      <div class="col-lg-8 d-none d-lg-block">
+        <div class="row">
+          <div class="col-lg-4 d-flex justify-content-end align-items-center">
+            <div class="btn-square bg-primary"><i class="fa fa-phone-alt text-dark"></i></div>
+            <div class="ms-2">
+              <h6 class="text-primary mb-0">Call Us</h6>
+              <span class="text-white">+91-8319595025</span>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex justify-content-end align-items-center">
+            <div class="btn-square bg-primary"><i class="fa fa-envelope-open text-dark"></i></div>
+            <div class="ms-2">
+              <h6 class="text-primary mb-0">Mail Us</h6>
+              <span class="text-white">principal.067.csvtu@gmail.com</span>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex justify-content-end align-items-center">
+            <div class="btn-square bg-primary"><i class="fa fa-map-marker-alt text-dark"></i></div>
+            <div class="ms-2">
+              <h6 class="text-primary mb-0">Address</h6>
+              <span class="text-white">Village Maharajpur, Kabirdham, CG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-secondary px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="nav-bar">
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-lg-0">
+            <button class="navbar-toggler me-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav me-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">AboutUs</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Administration</a>
+                        <div class="dropdown-menu bg-light m-0">
+                           <a href="principal.html" class="dropdown-item">Principal</a>
+                            <a href="Institute-feedback.html" class="dropdown-item">Institute Feedback</a>
+                            <a href="college-staff.html" class="dropdown-item">College Staff</a>
+                            <a href="committees.html" class="dropdown-item">Committees</a>
+                           
+                        </div>
+                    </div>
+                    <a href="academics.html" class="nav-item nav-link">Academics</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Facilities</a>
+                        <div class="dropdown-menu bg-light m-0">
+                            <a href="library.html" class="dropdown-item">Library</a>
+                            <a href="hostel.html" class="dropdown-item">Hostel</a>
+                            <a href="sports.html" class="dropdown-item">Sports</a>
+                        </div>
+                    </div>
+                   <a href="gallery.html" class="nav-item nav-link active">Gallery</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                </div>
+                <div class="d-none d-lg-flex ms-auto">
+                    <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid gallery-hero wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+      <h1 class="display-3 text-white animated slideInDown mb-4">Moments & Memories</h1>
+      <p class="fs-4 text-white animated slideInDown">Explore life at CGIT Kabirdham.</p>
+      <nav aria-label="breadcrumb" class="animated slideInDown">
+        <ol class="breadcrumb justify-content-center mb-0">
+          <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+          <li class="breadcrumb-item active text-primary" aria-current="page">Gallery</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container-fluid py-5">
+    <div class="container">
+        <div class="text-center mx-auto pb-4 wow fadeIn" data-wow-delay="0.1s" style="max-width: 900px;">
+            <p class="section-title bg-white text-center text-primary px-3">Our Gallery</p>
+            <h1 class="display-6 mb-4">A Glimpse Into Our World</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center mb-4 wow fadeIn" data-wow-delay="0.3s">
+                <ul id="gallery-filter">
+                    <li class="active" data-filter="*">All</li>
+                    <li data-filter=".filter-sports">Annual Sports</li>
+                    <li data-filter=".filter-techfest">Tech Fest</li>
+                    <li data-filter=".filter-campus">Campus Life</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row g-4 gallery-container wow fadeIn" data-wow-delay="0.5s">
+            
+            <div class="col-lg-4 col-md-6 gallery-item filter-sports">
+                <div class="gallery-wrap">
+                    <img src="img/gallery-1.jpg" class="img-fluid" alt="Annual Sports Meet 1">
+                    <div class="gallery-overlay">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 gallery-item filter-techfest">
+                <div class="gallery-wrap">
+                    <img src="img/gallery-2.jpg" class="img-fluid" alt="Tech Fest 1">
+                    <div class="gallery-overlay">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item filter-campus">
+                <div class="gallery-wrap">
+                    <img src="img/gallery-3.jpg" class="img-fluid" alt="Campus Life 1">
+                    <div class="gallery-overlay">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item filter-sports">
+                <div class="gallery-wrap">
+                    <img src="img/gallery-4.jpg" class="img-fluid" alt="Annual Sports Meet 2">
+                    <div class="gallery-overlay">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item filter-techfest">
+                <div class="gallery-wrap">
+                    <img src="img/gallery-5.jpg" class="img-fluid" alt="Tech Fest 2">
+                    <div class="gallery-overlay">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item filter-campus">
+                <div class="gallery-wrap">
+                    <img src="img/library-books.jpg" class="img-fluid" alt="Campus Life 2">
+                    <div class="gallery-overlay">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item filter-sports">
+                <div class="gallery-wrap">
+                    <img src="img/library-books.jpg" class="img-fluid" alt="Annual Sports Meet 3">
+                    <div class="gallery-overlay">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item filter-techfest">
+                <div class="gallery-wrap">
+                    <img src="img/department-cse.jpg" class="img-fluid" alt="Tech Fest 3">
+                    <div class="gallery-overlay">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item filter-campus">
+                <div class="gallery-wrap">
+                    <img src="img/department-electrical.jpg" class="img-fluid" alt="Campus Life 3">
+                    <div class="gallery-overlay">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row g-5 py-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Our Office</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Village Maharajpur, Near Kendriya Vidyalaya, Kawardha, Kabirdham, Chhattisgarh</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-8319595025</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>principal.067.csvtu@gmail.com</p>
+                <div class="d-flex pt-3">
+                    <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-x-twitter"></i></a>
+                    <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="about.html">About Us</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                <a class="btn btn-link" href="academics.html">Academics</a>
+                <a class="btn btn-link" href="term.html">Terms & Condition</a>
+                <a class="btn btn-link" href="student.html">Student Support</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Office Hours</h4>
+                <p class="mb-1">Monday - Friday</p>
+                <h6 class="text-light">10:00 am - 05:00 pm</h6>
+                <p class="mb-1">Saturday</p>
+                <h6 class="text-light">10:00 am - 01:00 pm</h6>
+                <p class="mb-1">Sunday</p>
+                <h6 class="text-light">Closed</h6>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Gallery</h4>
+                <div class="row g-2">
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright pt-5">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="fw-semi-bold" href="index.html">CGIT Kabirdham</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="fw-semi-bold" href="https://mohitbaghel.dev">Mohit Creations</a>.
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  
+  <script src="js/main.js"></script>
+
+  <script>
+    $(window).on('load', function () {
+      // Init Isotope
+      var $galleryContainer = $('.gallery-container').isotope({
+        itemSelector: '.gallery-item',
+        layoutMode: 'fitRows'
+      });
+
+      // Filter buttons
+      $('#gallery-filter li').on('click', function () {
+        $('#gallery-filter li').removeClass('active');
+        $(this).addClass('active');
+        var filterValue = $(this).attr('data-filter');
+        $galleryContainer.isotope({ filter: filterValue });
+      });
+      
+      // Init WOW.js
+      new WOW().init();
+    });
+    
+    // Back-to-top button logic (already in main.js, but safe to have here)
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) $('.back-to-top').fadeIn('slow');
+      else $('.back-to-top').fadeOut('slow');
+    });
+    $('.back-to-top').click(function () {
+      $('html, body').animate({ scrollTop: 0 }, 800, 'easeInOutExpo'); // Uses easing.js
+      return false;
+    });
+  </script>
+</body>
+</html>

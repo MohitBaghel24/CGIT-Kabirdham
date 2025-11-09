@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Institute Feedback - CGIT Kabirdham</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="CGIT Kabirdham, Chhattisgarh Institute of Technology, CSVTU, B.Tech Kabirdham" name="keywords">
+    <meta content="Provide feedback to CGIT Kabirdham. We value input from our students, faculty, and staff for continuous improvement." name="description">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+   <style>
+    /* Header logo and title */
+    .top-logo {
+      height: 45px;
+      margin-right: 10px;
+    }
+
+    .college-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    @media (max-width: 768px) {
+      .college-title {
+        font-size: 1.4rem;
+      }
+
+      .top-logo {
+        height: 38px;
+      }
+    }
+
+    /* Hero Section Background */
+    .feedback-hero {
+      position: relative;
+      background-image: url('img/coll.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 140px 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .feedback-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .feedback-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Testimonial Card */
+    .testimonial-card {
+      background:#fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial-card p {
+      color: #555;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-card h5 {
+      color: #f4a300;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .testimonial-card span {
+      color: #777;
+      font-size: 0.9em;
+    }
+
+    /* Circle Image Styling */
+    .testimonial-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #f4a300;
+      background-color: #fff; /* This is the white you see when image is missing */
+    }
+  </style>
+</head>
+
+
+<body>
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width:3rem; height:3rem;"></div>
+    </div>
+
+    <div class="container-fluid bg-secondary top-bar wow fadeIn" data-wow-delay="0.1s">
+        <div class="row align-items-center h-100">
+            <div class="col-lg-4 text-center text-lg-start">
+                <a href="index.html" class="d-flex align-items-center justify-content-center justify-content-lg-start text-decoration-none">
+                    <img src="img/cggov.png" alt="Chhattisgarh Govt Logo" class="top-logo">
+                    <h1 class="text-primary m-0 college-title">CGIT Kabirdham</h1>
+                </a>
+            </div>
+            <div class="col-lg-8 d-none d-lg-block">
+                <div class="row">
+                    <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                        <div class="btn-square bg-primary"><i class="fa fa-phone-alt text-dark"></i></div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Call Us</h6>
+                            <span class="text-white">+91-8319595025</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                        <div class="btn-square bg-primary"><i class="fa fa-envelope-open text-dark"></i></div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Mail Us</h6>
+                            <span class="text-white">principal.067.csvtu@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-end align-items-center">
+                        <div class="btn-square bg-primary"><i class="fa fa-map-marker-alt text-dark"></i></div>
+                        <div class="ms-2">
+                            <h6 class="text-primary mb-0">Address</h6>
+                            <span class="text-white">Village Maharajpur, Kabirdham, CG</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-secondary px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-lg-0">
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav me-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">AboutUs</a> 
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Administration</a>
+                            <div class="dropdown-menu bg-light m-0">
+                               <a href="principal.html" class="dropdown-item">Principal</a>
+                               <a href="feedback.html" class="dropdown-item active">Institute Feedback (Faculty/Student)</a>
+                                <a href="college-staff.html" class="dropdown-item">College Staff</a>
+                                <a href="committees.html" class="dropdown-item">Committees</a>
+                                <!--<a href="non-academic.html" class="dropdown-item">Non-Academic Section</a>-->
+                            </div>
+                        </div>
+                        <a href="academics.html" class="nav-item nav-link">Academics</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Facilities</a>
+                            <div class="dropdown-menu bg-light m-0">
+                                <a href="library.html" class="dropdown-item">Library</a>
+                                <a href="hostel.html" class="dropdown-item">Hostel</a>
+                                <a href="sports.html" class="dropdown-item">Sports</a>
+                            </div>
+                        </div>
+                       <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                    </div>
+                    <div class="d-none d-lg-flex ms-auto">
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid feedback-hero wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white animated slideInDown mb-4">Your Voice, Our Future</h1>
+            <p class="fs-4 text-white animated slideInDown">Help us shape a brighter tomorrow for CGIT Kabirdham.</p>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-white">Administration</a></li>
+                    <li class="breadcrumb-item active text-primary" aria-current="page">Institute Feedback</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-12 text-center wow fadeIn" data-wow-delay="0.2s">
+                    <p class="section-title bg-white text-center text-primary px-3">Continuous Improvement</p>
+                    <h1 class="display-6 mb-4">Building a Better CGIT, Together</h1>
+                    <p classs="mb-4">At CGIT Kabirdham, your insights are invaluable. Whether you're a student experiencing campus life, a faculty member shaping minds, or a staff member contributing to our operations, your perspective fuels our progress. We are committed to fostering an environment of excellence, and active feedback from our community is essential to achieve this.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto pb-4 wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="section-title bg-white text-center text-primary px-3">Real Experiences</p>
+                <h1 class="display-6 mb-4">Voices from CGIT Kabirdham</h1>
+            </div>
+            
+            <h3 class="mb-4 text-primary wow fadeIn" data-wow-delay="0.2s">Student Testimonials</h3>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="testimonial-card">
+                        <p>"The labs here are incredibly well-equipped, giving us hands-on experience that’s crucial for our careers. The faculty are also very supportive and always push us to excel."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="img/student-1.jpg" class="testimonial-img me-3" alt="Student Anjali Sharma">
+                            <div>
+                                <h5>Anjali Sharma</h5>
+                                <span>Diploma in Electrical Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="testimonial-card">
+                        <p>"CGIT Kabirdham has provided me with a strong foundation in Computer Science. The coding competitions and technical workshops organized regularly have significantly boosted my skills."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="img/student-2.jpg" class="testimonial-img me-3" alt="Student Rahul Verma">
+                            <div>
+                                <h5>Rahul Verma</h5>
+                                <span>Diploma in Computer Science</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="testimonial-card">
+                        <p>"The new B.Tech programs are a fantastic opportunity. I'm excited to be part of the first batch for Data Science. The curriculum looks modern and industry-relevant."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="img/student-3.jpg" class="testimonial-img me-3" alt="Student Priya Singh">
+                            <div>
+                                <h5>Priya Singh</h5>
+                                <span>B.Tech Data Science (Prospective)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.6s">
+                    <div class="testimonial-card">
+                        <p>"The CDDM department is amazing! We get so much practical exposure, and the faculty encourages our creativity. The 60-seat batch means we get a lot of personal attention."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="img/student-4.jpg" class="testimonial-img me-3" alt="Student Aisha Khan">
+                            <div>
+                                <h5>Aisha Khan</h5>
+                                <span>Diploma in CDDM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="my-4 pt-4 text-primary wow fadeIn" data-wow-delay="0.2s">Faculty Insights</h3>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="testimonial-card">
+                        <p>"It's rewarding to teach at an institute so dedicated to technical education in a developing region. The students are eager to learn, and the administration supports innovative teaching methods."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="img/faculty-1.jpg" class="testimonial-img me-3" alt="Faculty Dr. S. K. Gupta">
+                            <div>
+                                <h5>Dr. S. K. Gupta</h5>
+                                <span>Head of Department, E&TC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="testimonial-card">
+                        <p>"The commitment to upgrading infrastructure and introducing new B.Tech programs shows CGIT's vision. I'm excited about the future and the opportunities it brings for our students and faculty."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="img/faculty-2.jpg" class="testimonial-img me-3" alt="Faculty Prof. Meena Devi">
+                            <div>
+                                <h5>Prof. Meena Devi</h5>
+                                <span>Lecturer, Electrical Engineering</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="testimonial-card">
+                        <p>"As HOD of Computer Science, I am proud of our students' achievements. Our focus on skill-based learning and modern labs prepares them well for the industry."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="img/faculty-3.jpg" class="testimonial-img me-3" alt="Faculty Mr. Avinash Kumar Singh">
+                            <div>
+                                <h5>Mr. Avinash Kumar Singh</h5>
+                                <span>HOD, Computer Science</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.6s">
+                    <div class="testimonial-card">
+                        <p>"The growth of this institute is remarkable. We are truly building an IIT-like model in Kabirdham, and the positive feedback from students reinforces our mission."</p>
+                        <div class="d-flex align-items-center">
+                            <img src="img/faculty-4.jpg" class="testimonial-img me-3" alt="Faculty Mr. Satendra S. Bhadoriya">
+                            <div>
+                                <h5>Mr. Satendra S. Bhadoriya</h5>
+                                <span>HOD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid donate py-5">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-7 donate-text bg-light py-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column justify-content-center h-100 p-5 wow fadeIn" data-wow-delay="0.3s">
+                        <h1 class="display-6 mb-4 text-primary">Your Feedback Matters!</h1>
+                        <p class="fs-5 mb-0">We are listening. Share your experiences, suggestions, or concerns through our confidential feedback form. Whether it's about academics, facilities, or campus life, your input directly contributes to the growth and continuous improvement of CGIT Kabirdham.</p>
+                        <p class="fs-5 mt-3 mb-0">Help us make CGIT an even better place for learning and innovation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 donate-form bg-primary py-5 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <div class="h-100 p-5">
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name (Optional)">
+                                        <label for="name">Your Name (Optional)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email (Optional)">
+                                        <label for="email">Your Email (Optional)</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="role" required>
+                                            <option value="" selected disabled>I am a... *</option>
+                                            <option value="Student">Student</option>
+                                            <option value="Faculty">Faculty</option>
+                                            <option value="Staff">Staff</option>
+                                            <option value="Parent">Parent / Guardian</option>
+                                            <option value="Alumni">Alumni</option>
+                                        </select>
+                                        <label for="role">Your Role *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="category" required>
+                                            <option value="" selected disabled>Feedback Category *</option>
+                                            <option value="Academics">Academics / Coursework</option>
+                                            <option value="Facilities">Facilities (Labs, Library, Hostel, etc.)</option>
+                                            <option value="Administration">Administration / Office</option>
+                                            <option value="Faculty">Faculty</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <label for="category">Feedback Category *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave your detailed feedback here *" id="message" style="height: 150px" required></textarea>
+                                        <label for="message">Your Feedback *</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-secondary py-3 w-100" type="submit">Submit Feedback</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-primary py-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="display-6 mb-4">Stay Connected with CGIT</h1>
+                    <div class="position-relative w-100 mb-2">
+                        <input class="form-control border-0 w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email"
+                            style="height: 60px;">
+                        <button type="button"
+                            class="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2"><i
+                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                    </div>
+                    <p class="mb-0">Subscribe to our newsletter for the latest updates, news, and events.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5 py-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Our Office</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Village Maharajpur, Near Kendriya Vidyalaya, Kawardha, Kabirdham, Chhattisgarh</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-8319595025</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>principal.067.csvtu@gmail.com</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-x-twitter"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="academics.html">Academics</a>
+                    <a class="btn btn-link" href="term.html">Terms & Condition</a>
+                    <a class="btn btn-link" href="student.html">Student Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Office Hours</h4>
+                    <p class="mb-1">Monday - Friday</p>
+                    <h6 class="text-light">10:00 am - 05:00 pm</h6>
+                    <p class="mb-1">Saturday</p>
+                    <h6 class="text-light">10:00 am - 01:00 pm</h6>
+                    <p class="mb-1">Sunday</p>
+                    <h6 class="text-light">Closed</h6>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Gallery</h4>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-4.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-5.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright pt-5">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="fw-semi-bold" href="index.html">CGIT Kabirdham</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a class="fw-semi-bold" href="https://mohitbaghel.dev">Mohit Creations</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
