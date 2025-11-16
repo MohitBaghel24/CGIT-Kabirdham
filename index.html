@@ -31,25 +31,19 @@
             margin-right: 10px;
         }
         .college-title {
-            font-size: 1.75rem;
+            font-size: 1.75rem; /* This is for Desktop */
             font-weight: 700;
             line-height: 1.1;
         }
-        @media (max-width: 768px) {
-            .college-title {
-                font-size: 1.4rem;
-            }
-            .top-logo {
-                height: 40px;
-                margin-right: 8px;
-            }
-        }
-
         
         /* --- CORRECTIONS START --- */
        
         /* 1. Make the carousel fill the rest of the screen */
         .header-carousel {
+            /* 100vh is 100% of your window height.
+               We subtract 115px to leave space for the green top-bar and yellow nav-bar.
+               You can change 115px if it's not a perfect fit.
+            */
             min-height: calc(100vh - 115px);
             display: flex;
             align-items: center; /* This centers the "WELCOME" text vertically */
@@ -63,7 +57,8 @@
        
         /* --- CORRECTIONS END --- */
 
-        /* --- FIX FOR ARROWS & MOBILE HEADER START --- */
+
+        /* --- NEW FIX FOR ARROWS & MOBILE HEADER START --- */
 
         /* 1. Fix Carousel Arrows (Transparent & Positioned) */
         .header-carousel.owl-carousel .owl-nav .owl-prev,
@@ -88,31 +83,47 @@
             color: var(--primary) !important; /* Makes the arrow icon turn yellow on hover */
         }
 
-        /* 2. Fix Mobile Header (Centering & Spacing) */
+        /* 2. Fix Mobile Header (Centering, Sizing, Spacing) */
         /* This targets phones and tablets (screens smaller than 992px) */
         @media (max-width: 991.98px) {
+            
+            /* Makes the green bar smaller */
             .top-bar {
-                /* Makes the green bar smaller */
-                padding-top: 0.25rem !important;
-                padding-bottom: 0.25rem !important;
+                padding-top: 10px !important;
+                padding-bottom: 10px !important;
+            }
+            
+            /* Center the logo/title block */
+            .top-bar .text-lg-start {
+                text-align: center !important; 
             }
             .top-bar .text-lg-start > a {
-                 /* This forces the <a> tag to center its content */
                 justify-content: center !important;
+                display: inline-flex !important; /* Ensures it respects the text-align */
+            }
+
+            /* Make logo and title large and professional */
+            .top-logo {
+                height: 40px; /* Good, solid size for mobile */
+                margin-right: 10px;
+            }
+            .college-title {
+                font-size: 1.8rem; /* <-- USER REQUEST: Made "big bigger" */
+                line-height: 1.2;
             }
         }
         
-        /* 3. Make title even smaller on very small phones */
-        @media (max-width: 576px) {
-            .college-title {
-                font-size: 1.2rem; /* Even smaller font for small phones */
-            }
+        /* 3. Adjust for very small phones */
+        @media (max-width: 380px) {
             .top-logo {
-                height: 35px; /* Smaller logo for small phones */
+                height: 35px;
+            }
+            .college-title {
+                font-size: 1.5rem; /* <-- USER REQUEST: Increased this as well */
             }
         }
-        /* --- FIX FOR ARROWS & MOBILE HEADER END --- */
-       
+        /* --- NEW FIX FOR ARROWS & MOBILE HEADER END --- */
+
     </style>
 </head>
 
@@ -122,7 +133,7 @@
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
     
-    <div class="container-fluid bg-secondary top-bar py-2 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-secondary top-bar wow fadeIn" data-wow-delay="0.1s">
         <div class="row align-items-center">
             
             <div class="col-12 col-lg-4 text-center text-lg-start">
@@ -714,7 +725,7 @@
                         </div>
                         <div class="team-social bg-light d-flex flex-column justify-content-center flex-shrink-0 p-4">
                             <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary my-2" href="#!"><i classB="fab fa-x-twitter"></i></a>
+                            <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-x-twitter"></i></a>
                             <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-instagram"></i></a>
                             <a class="btn btn-square btn-primary my-2" href="#!"><i class="fab fa-youtube"></i></a>
                         </div>
@@ -750,12 +761,12 @@
                                             <i class="fa fa-star text-primary"></i>
                                             <i class="fa fa-star text-primary"></i>
                                         </div>
-                                        <p classfs-5">The faculty is excellent and the campus provides a great learning environment. The new B.Tech programs are an exciting opportunity for students in the region.</p>
+                                        <p class="fs-5">The faculty is excellent and the campus provides a great learning environment. The new B.Tech programs are an exciting opportunity for students in the region.</p>
                                         <div class="d-flex align-items-center">
                                             <div class="btn-lg-square bg-light text-secondary flex-shrink-0">
                                                 <i class="fa fa-quote-right fa-2x"></i>
                                             </div>
-                                            <div classa="ps-3">
+                                            <div class="ps-3">
                                                 <h5 class="mb-0">Rohan Mehra</h5>
                                                 <span>Student, B.Tech Data Science</span>
                                             </div>
@@ -929,4 +940,3 @@
 </body>
 
 </html>
-
