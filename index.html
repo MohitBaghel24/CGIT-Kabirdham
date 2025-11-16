@@ -25,6 +25,8 @@
 
     <style>
         /* Header logo and title sizing fix */
+        /* Header logo and title sizing fix */
+        /* Header logo and title sizing fix */
         .top-logo {
             height: 45px;
             width: auto;
@@ -65,6 +67,40 @@
            padding-bottom: 0;
         }
        
+        /* --- CORRECTIONS END --- */
+       
+        /* --- FIX FOR TRANSPARENT & POSITIONED ARROWS START --- */
+
+        /* 1. Style the individual arrows */
+        .header-carousel.owl-carousel .owl-nav .owl-prev,
+        .header-carousel.owl-carousel .owl-nav .owl-next {
+            position: absolute; /* Position them freely */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust vertical centering */
+            background: none !important; /* Removes the background */
+            border: none !important; /* Removes any border */
+            color: #FFFFFF; /* Set a default color (white) so they are visible */
+            font-size: 2rem; /* Make the arrows bigger */
+        }
+
+        /* 2. Position the 'prev' arrow on the left */
+        .header-carousel.owl-carousel .owl-nav .owl-prev {
+            left: 15px; /* Add some space from the left edge */
+        }
+
+        /* 3. Position the 'next' arrow on the right */
+        .header-carousel.owl-carousel .owl-nav .owl-next {
+            right: 15px; /* Add some space from the right edge */
+        }
+
+        /* 4. Add a hover effect to the arrow icon itself */
+        .header-carousel.owl-carousel .owl-nav .owl-prev:hover,
+        .header-carousel.owl-carousel .owl-nav .owl-next:hover {
+            background: none !important;
+            border: none !important;
+            color: var(--primary) !important; /* Makes the arrow icon turn yellow on hover */
+        }
+        
         /* --- CORRECTIONS END --- */
        
     </style>
@@ -880,3 +916,4 @@
 </body>
 
 </html>
+
