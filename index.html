@@ -24,7 +24,6 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        /* Header logo and title sizing fix */
         .top-logo {
             height: 45px;
             width: auto;
@@ -99,30 +98,31 @@
             }
             .top-bar .text-lg-start > a {
                 justify-content: center !important;
-                display: inline-flex !important; /* Ensures it respects the text-align */
+                display: inline-flex !important; /* Use inline-flex for alignment */
+                white-space: nowrap; /* <-- FIX: Keep logo and title on one line */
             }
 
-            /* Make logo and title large and professional */
+            /* Make logo and title professional size */
             .top-logo {
-                height: 40px; /* Good, solid size for mobile */
-                margin-right: 10px;
+                height: 55px; /* <-- FIX: Reduced size to make space */
+                margin-right: 12px;
             }
             .college-title {
-                font-size: 1.8rem; /* <-- USER REQUEST: Made "big bigger" */
-                line-height: 1.2;
+                font-size: 2.0rem; /* <-- FIX: Reduced size to fit on one line */
+                line-height: 1.8;
             }
         }
         
         /* 3. Adjust for very small phones */
         @media (max-width: 380px) {
             .top-logo {
-                height: 35px;
+                height: 30px; /* <-- FIX: Even smaller */
+                margin-right: 5px;
             }
             .college-title {
-                font-size: 1.5rem; /* <-- USER REQUEST: Increased this as well */
+                font-size: 1.2rem; /* <-- FIX: Even smaller to fit */
             }
         }
-        /* --- NEW FIX FOR ARROWS & MOBILE HEADER END --- */
 
     </style>
 </head>
