@@ -25,105 +25,129 @@
 
     <style>
         .top-logo {
-            height: 45px;
-            width: auto;
-            margin-right: 10px;
-        }
-        .college-title {
-            font-size: 1.75rem; /* This is for Desktop */
-            font-weight: 700;
-            line-height: 1.1;
-        }
-        
-        /* --- CORRECTIONS START --- */
-       
-        /* 1. Make the carousel fill the rest of the screen */
-        .header-carousel {
-            /* 100vh is 100% of your window height.
-               We subtract 115px to leave space for the green top-bar and yellow nav-bar.
-               You can change 115px if it's not a perfect fit.
-            */
-            min-height: calc(100vh - 115px);
-            display: flex;
-            align-items: center; /* This centers the "WELCOME" text vertically */
-        }
-       
-        /* 2. Remove the extra padding that was on the carousel slides */
-        .header-carousel .container {
-           padding-top: 0;
-           padding-bottom: 0;
-        }
-       
-        /* --- CORRECTIONS END --- */
+    height: 45px;
+    width: auto;
+    margin-right: 10px;
+}
 
+.college-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
 
-        /* --- NEW FIX FOR ARROWS & MOBILE HEADER START --- */
+/* ----------------------------------------------------------
+   CAROUSEL HEIGHT FIX – PERFECT FULL SCREEN FIT
+---------------------------------------------------------- */
+.header-carousel {
+    min-height: calc(100vh - 115px);
+    display: flex;
+    align-items: center;
+}
 
-        /* 1. Fix Carousel Arrows (Transparent & Positioned) */
-        .header-carousel.owl-carousel .owl-nav .owl-prev,
-        .header-carousel.owl-carousel .owl-nav .owl-next {
-            position: absolute; /* Position them freely */
-            top: 50%; /* Center vertically */
-            transform: translateY(-50%); /* Adjust vertical centering */
-            background: none !important; /* Removes the background */
-            border: none !important; /* Removes any border */
-            color: #FFFFFF; /* White arrows */
-            font-size: 3rem; /* Make the arrows bigger */
-            transition: 0.3s;
-        }
-        .header-carousel.owl-carousel .owl-nav .owl-prev {
-            left: 15px; /* Space from the left edge */
-        }
-        .header-carousel.owl-carousel .owl-nav .owl-next {
-            right: 15px; /* Space from the right edge */
-        }
-        .header-carousel.owl-carousel .owl-nav .owl-prev:hover,
-        .header-carousel.owl-carousel .owl-nav .owl-next:hover {
-            color: var(--primary) !important; /* Makes the arrow icon turn yellow on hover */
-        }
+.header-carousel .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
-        /* 2. Fix Mobile Header (Centering, Sizing, Spacing) */
-        /* This targets phones and tablets (screens smaller than 992px) */
-        @media (max-width: 991.98px) {
-            
-            /* Makes the green bar smaller */
-            .top-bar {
-                padding-top: 10px !important;
-                padding-bottom: 10px !important;
-            }
-            
-            /* Center the logo/title block */
-            .top-bar .text-lg-start {
-                text-align: center !important; 
-            }
-            .top-bar .text-lg-start > a {
-                justify-content: center !important;
-                display: inline-flex !important; /* Use inline-flex for alignment */
-                white-space: nowrap; /* <-- FIX: Keep logo and title on one line */
-            }
+/* ----------------------------------------------------------
+   CAROUSEL ARROWS FIX – TRANSPARENT + POSITIONED
+---------------------------------------------------------- */
+.header-carousel.owl-carousel .owl-nav .owl-prev,
+.header-carousel.owl-carousel .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none !important;
+    border: none !important;
+    color: #f1f1ef;
+    font-size: 3rem;
+    transition: 0.3s;
+}
 
-            /* Make logo and title professional size */
-            .top-logo {
-                height: 40px; /* <-- FIX: Adjusted size */
-                margin-right: 10px;
-            }
-            .college-title {
-                font-size: 1.7rem; /* <-- FIX: Adjusted size to fit */
-                line-height: 1.2; /* <-- FIX: Removed 1.8 */
-            }
-        }
-        
-        /* 3. Adjust for very small phones */
-        @media (max-width: 480px) {
-            .top-logo {
-                height: 35px; /* <-- FIX: Adjusted size */
-                margin-right: 12px;
-            }
-            .college-title {
-                font-size: 1.8rem; /* <-- FIX: Adjusted size to fit */
-                line-height: 1.2;
-            }
-        }
+.header-carousel.owl-carousel .owl-nav .owl-prev { left: 15px; }
+.header-carousel.owl-carousel .owl-nav .owl-next { right: 15px; }
+
+.header-carousel.owl-carousel .owl-nav .owl-prev:hover,
+.header-carousel.owl-carousel .owl-nav .owl-next:hover {
+    color: var(--primary) !important;
+}
+
+/* ----------------------------------------------------------
+   MOBILE HEADER FIX
+   — Center logo + title nicely
+   — Add spacing between GREEN top bar & YELLOW menu bar
+   — Prevent overlap/merging exactly like screenshot
+---------------------------------------------------------- */
+/* ----------------------------------------------------------
+   FIX MOBILE HEADER — FULL GREEN, NO WHITE GAP
+---------------------------------------------------------- */
+/* FIX MOBILE HEADER – REMOVE WHITE GAP BUT KEEP YELLOW MENU */
+/* ----------------------------------------------------------
+   EXACT GREEN COLOR USED FROM IMAGE
+   HEX: #1B685B (27,104,91)
+---------------------------------------------------------- */
+
+/* MOBILE HEADER FIX – APPLY SAME GREEN EVERYWHERE */
+@media (max-width: 991.98px) {
+
+    /* Apply SAME GREEN under logo, gap, and menu sides */
+    .top-bar,
+    .nav-bar {
+        background-color: #1B685B !important;
+    }
+
+    /* REMOVE WHITE GAP — turn it green */
+    .nav-bar {
+        margin-top: 0 !important;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    /* KEEP YELLOW MENU BAR SAME */
+    .navbar {
+        background-color: #FFC107 !important;
+    }
+
+    /* Dropdown also stays yellow */
+    #navbarCollapse {
+        background-color: #FFC107 !important;
+    }
+
+    /* Center logo block */
+    .top-bar .text-lg-start {
+        text-align: center !important;
+    }
+
+    .top-bar .text-lg-start > a {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px;
+    }
+
+    /* Logo sizing */
+    .top-logo {
+        height: 50px;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    /* Title styling */
+    .college-title {
+        font-size: 1.55rem;
+        line-height: 1.2;
+        color: #FFC107 !important; /* Yellow title matches menu */
+        margin: 0;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+    .top-logo { height: 40px; }
+    .college-title { font-size: 1.3rem; }
+}
 
     </style>
 </head>
