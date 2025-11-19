@@ -24,7 +24,7 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        .top-logo {
+ .top-logo {
     height: 45px;
     width: auto;
     margin-right: 10px;
@@ -37,7 +37,7 @@
 }
 
 /* ----------------------------------------------------------
-   CAROUSEL HEIGHT FIX – PERFECT FULL SCREEN FIT
+   CAROUSEL HEIGHT FIX – FULL SCREEN
 ---------------------------------------------------------- */
 .header-carousel {
     min-height: calc(100vh - 115px);
@@ -51,7 +51,7 @@
 }
 
 /* ----------------------------------------------------------
-   CAROUSEL ARROWS FIX – TRANSPARENT + POSITIONED
+   CAROUSEL ARROWS FIX
 ---------------------------------------------------------- */
 .header-carousel.owl-carousel .owl-nav .owl-prev,
 .header-carousel.owl-carousel .owl-nav .owl-next {
@@ -74,70 +74,84 @@
 }
 
 /* ----------------------------------------------------------
-   MOBILE HEADER FIX
-   — Center logo + title nicely
-   — Add spacing between GREEN top bar & YELLOW menu bar
-   — Prevent overlap/merging exactly like screenshot
----------------------------------------------------------- */
-/* ----------------------------------------------------------
-   FIX MOBILE HEADER — FULL GREEN, NO WHITE GAP
----------------------------------------------------------- */
-/* FIX MOBILE HEADER – REMOVE WHITE GAP BUT KEEP YELLOW MENU */
-/* ----------------------------------------------------------
-   EXACT GREEN COLOR USED FROM IMAGE
-   HEX: #1B685B (27,104,91)
----------------------------------------------------------- */
-
-/* MOBILE HEADER FIX – APPLY SAME GREEN EVERYWHERE *//* ----------------------------------------------------------
-   MOBILE CAROUSEL TEXT & BUTTON IMPROVEMENT
-   ONLY FOR SCREENS < 992px
+   MOBILE FIXES (ALL CLEANED & MERGED)
 ---------------------------------------------------------- */
 @media (max-width: 991.98px) {
 
-    /* Make main heading bigger and bolder */
+    /* CENTER THE TOP BAR LOGO + TITLE */
+    .top-bar .text-lg-start {
+        text-align: center !important;
+    }
+
+    .top-bar .text-lg-start a {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px;
+    }
+
+    /* LOGO SIZE */
+    .top-logo {
+        height: 50px !important;
+        margin: 0 auto !important;
+    }
+
+    /* TITLE SIZE */
+    .college-title {
+        font-size: 1.55rem !important;
+        color: #FFC107 !important;
+        line-height: 1.1 !important;
+    }
+
+    /* ------------------------------------------------------
+       MOVE TEXT DOWN (YOUR MAIN REQUEST)
+    ------------------------------------------------------ */
+    .carousel-text {
+        margin-top: 60px !important;        /* moves text block down */
+        padding-bottom: 40px !important;
+    }
+
+    /* Heading spacing */
     .carousel-text h3 {
         font-size: 2.2rem !important;
-        line-height: 1.3 !important;
         font-weight: 800 !important;
+        margin-bottom: 20px !important;
+        line-height: 1.3 !important;
         text-transform: uppercase;
     }
 
-    /* Make sub-text slightly bigger & more readable */
+    /* Paragraph spacing */
     .carousel-text p {
         font-size: 1.15rem !important;
+        margin-bottom: 30px !important;
         line-height: 1.5 !important;
         color: #333 !important;
     }
 
-    /* Better spacing above & below text */
-    .header-carousel .container {
-        padding-top: 25px !important;
+    /* ------------------------------------------------------
+       PUSH BUTTONS DOWN BELOW WHITE ARROW
+    ------------------------------------------------------ */
+    .carousel-text .d-flex {
+        margin-top: 60px !important;        /* moves buttons downward */
+        gap: 16px !important;
     }
 
-    /* ----------------------------------------------------------
-       MAKE BUTTONS ATTRACTIVE, FORMAL & MODERN FOR MOBILE
-    ---------------------------------------------------------- */
+    /* BUTTON STYLING */
     .carousel-text .btn {
-        border-radius: 10px !important;      /* modern rounded corners */
-        font-size: 1.1rem !important;        /* bigger text */
-        font-weight: 600 !important;         /* more professional look */
-        padding: 14px 22px !important;       /* better size */
+        border-radius: 10px !important;
+        padding: 14px 22px !important;
+        font-size: 1.1rem !important;
+        font-weight: 600 !important;
         box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
     }
 
-    /* Button spacing fix on mobile */
-    .carousel-text .btn + .btn {
-        margin-left: 12px !important;
-    }
-
-    /* Make yellow button look premium */
     .btn.btn-primary {
         background-color: #FFC107 !important;
         border: none !important;
         color: #000 !important;
     }
 
-    /* Make green button professional */
     .btn.btn-secondary {
         background-color: #1B685B !important;
         border: none !important;
@@ -145,17 +159,28 @@
     }
 }
 
-/* Extra small devices */
+/* ----------------------------------------------------------
+   VERY SMALL PHONES (<420px)
+---------------------------------------------------------- */
 @media (max-width: 420px) {
+
+    .carousel-text {
+        margin-top: 75px !important;        /* extra spacing */
+        padding-bottom: 55px !important;
+    }
+
     .carousel-text h3 {
         font-size: 1.9rem !important;
     }
-    
+
     .carousel-text p {
         font-size: 1.05rem !important;
     }
-}
 
+    .carousel-text .d-flex {
+        margin-top: 75px !important;        /* push buttons more */
+    }
+}
 
 
     </style>
