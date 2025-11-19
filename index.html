@@ -88,66 +88,93 @@
    HEX: #1B685B (27,104,91)
 ---------------------------------------------------------- */
 
-/* MOBILE HEADER FIX – APPLY SAME GREEN EVERYWHERE */
-@media (max-width: 991.98px) {
+/* MOBILE HEADER FIX – APPLY SAME GREEN EVERYWHERE */@media (max-width: 991.98px) {
 
-    /* Apply SAME GREEN under logo, gap, and menu sides */
-    .top-bar,
-    .nav-bar {
-        background-color: #1B685B !important;
+    /* Shrink the green header height */
+    .top-bar {
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+        background-color: #1B685B !important; /* Your exact green */
     }
 
-    /* REMOVE WHITE GAP — turn it green */
-    .nav-bar {
-        margin-top: 0 !important;
-        padding-top: 4px;
-        padding-bottom: 4px;
-    }
-
-    /* KEEP YELLOW MENU BAR SAME */
-    .navbar {
-        background-color: #FFC107 !important;
-    }
-
-    /* Dropdown also stays yellow */
-    #navbarCollapse {
-        background-color: #FFC107 !important;
-    }
-
-    /* Center logo block */
-    .top-bar .text-lg-start {
-        text-align: center !important;
-    }
-
-    .top-bar .text-lg-start > a {
+    /* Center logo + title vertically */
+    .top-bar .text-lg-start a {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 6px;
+        gap: 2px !important;
     }
 
-    /* Logo sizing */
+    /* Smaller logo */
     .top-logo {
-        height: 50px;
+        height: 40px;
         width: auto;
         margin: 0 auto;
     }
 
-    /* Title styling */
+    /* Smaller title */
     .college-title {
-        font-size: 1.55rem;
-        line-height: 1.2;
-        color: #FFC107 !important; /* Yellow title matches menu */
+        font-size: 1.25rem;
+        color: #FFC107 !important; /* Yellow text */
+        line-height: 1.1;
         margin: 0;
+    }
+
+    /* Fix menu bar gap — attach directly under green bar */
+    .nav-bar {
+        background-color: #1B685B !important; 
+        margin-top: 0 !important;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /* Keep yellow menu bar EXACTLY yellow */
+    .navbar {
+        background-color: #FFC107 !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    /* Fix dropdown too */
+    #navbarCollapse {
+        background-color: #FFC107 !important;
+    }
+
+    /* ----------------------------------------------------------
+       FIX FIRST SLIDE SPACING (text & background image)
+    ---------------------------------------------------------- */
+    .header-carousel {
+        min-height: 75vh !important; /* Reduce height for mobile */
+        padding-top: 0 !important;
+    }
+
+    .header-carousel .container {
+        padding-top: 20px !important; /* pull content up */
+    }
+
+    .carousel-text h3 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .carousel-text p {
+        font-size: 1rem !important;
     }
 }
 
-/* Very small phones */
+/* Extra small phones */
 @media (max-width: 400px) {
-    .top-logo { height: 40px; }
-    .college-title { font-size: 1.3rem; }
+    .top-logo { height: 34px; }
+    .college-title { font-size: 1.1rem; }
 }
+
 
     </style>
 </head>
